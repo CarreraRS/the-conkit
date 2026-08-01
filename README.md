@@ -1,11 +1,28 @@
+--
+
+# Video
+
+https://www.youtube.com/watch?v=-hgDRIA5WOI
+
+---
+
+# Image
+
+https://ibb.co/8gF19STK
+
+https://ibb.co/0R3wn3MZ
+
+---
+
 # PLAY
 
 https://carrerars.github.io/the-conkit/
+
 ---
 
 # 🎮 The ConKit
 
-[English Version](https://www.google.com/search?q=%23-english-version) | [ภาษาไทย](https://www.google.com/search?q=%23-%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A2)
+[English Version]([https://www.google.com/search?q=%23-english-version](https://www.youtube.com/watch?v=QDia3e12czc)) | [ภาษาไทย](https://www.youtube.com/watch?v=n_E0xkHf08E&list=RDn_E0xkHf08E&start_radio=1)
 
 ---
 
