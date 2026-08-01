@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://jd65qwar6qdi"]
+
+[ext_resource type="Script" uid="uid://bvvfs7mvqm2vk" path="res://health_potion.gd" id="1_un3cr"]
+[ext_resource type="Texture2D" uid="uid://df5rinmvtw5qg" path="res://item/heal.png" id="2_23fdm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_un3cr"]
+radius = 8.0
+
+[node name="HealthPotion" type="Area2D" unique_id=1640522303]
+script = ExtResource("1_un3cr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=846372747]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_23fdm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=723965167]
+shape = SubResource("CircleShape2D_un3cr")

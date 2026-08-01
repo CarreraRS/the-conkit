@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bpfl17b067ei0"]
+
+[ext_resource type="Script" uid="uid://xvira2ib5emk" path="res://level_3.gd" id="1_hldmh"]
+[ext_resource type="Texture2D" uid="uid://d36wr5xacfgyb" path="res://image/tur2.png" id="2_gew73"]
+
+[node name="level_3" type="Control" unique_id=2108342181]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hldmh")
+
+[node name="StoryImage" type="TextureRect" parent="." unique_id=1988395306]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_gew73")
+
+[node name="NextButton" type="Button" parent="." unique_id=570353971]
+layout_mode = 0
+offset_left = 1032.0
+offset_top = 559.0
+offset_right = 1077.0
+offset_bottom = 590.0
+scale = Vector2(1.5, 1.5)
+text = "Next"

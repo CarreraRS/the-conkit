@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://coj5814xpkk5x"
+path="res://.godot/imported/AKMU (악뮤) Love Lee  8 Bit Cover.mp3-2bf1dda4f2c77facc01c7e1fa1b9d784.mp3str"
+
+[deps]
+
+source_file="res://music/AKMU (악뮤) Love Lee  8 Bit Cover.mp3"
+dest_files=["res://.godot/imported/AKMU (악뮤) Love Lee  8 Bit Cover.mp3-2bf1dda4f2c77facc01c7e1fa1b9d784.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

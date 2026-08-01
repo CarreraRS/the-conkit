@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ctsyp0msps300"]
+
+[ext_resource type="Script" uid="uid://u4w82ihilav" path="res://boss_skill.gd" id="1_w412k"]
+[ext_resource type="Texture2D" uid="uid://cw78ehpaywp1w" path="res://enemy/boss/bossskill.png" id="2_gm5tr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtqeq"]
+size = Vector2(96, 22)
+
+[node name="BossSkill" type="Area2D" unique_id=475520601]
+script = ExtResource("1_w412k")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=406615112]
+position = Vector2(0, -9.536743e-07)
+scale = Vector2(0.6111111, 0.69736844)
+texture = ExtResource("2_gm5tr")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1430331642]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_wtqeq")

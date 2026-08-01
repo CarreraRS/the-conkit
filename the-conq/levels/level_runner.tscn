@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://c2ul1i38qfanj"]
+
+[ext_resource type="PackedScene" uid="uid://cjjmmahqp0j55" path="res://player/auto_player.tscn" id="1_7ej1w"]
+[ext_resource type="Texture2D" uid="uid://8h6pbyu4elfj" path="res://image/bgg23.png" id="1_tqdnr"]
+[ext_resource type="PackedScene" uid="uid://bb486s1w6ghsc" path="res://enemy/boss/runner_boss.tscn" id="2_tqdnr"]
+[ext_resource type="PackedScene" uid="uid://bldfylk2grej1" path="res://levels/world_spawner.tscn" id="3_lucy6"]
+[ext_resource type="PackedScene" uid="uid://btgqgpnrlsiif" path="res://levels/platform_chunk.tscn" id="4_lo1pd"]
+[ext_resource type="Script" uid="uid://d24g2t14myvks" path="res://hud.gd" id="5_bel1f"]
+[ext_resource type="AudioStream" uid="uid://cso2sadr67eud" path="res://music/aespa 에스파 'DIRTY WORK' Videogame Ver..mp3" id="7_lucy6"]
+[ext_resource type="PackedScene" uid="uid://p1ldqw8kvj8q" path="res://mainmenu/game_over_ui.tscn" id="8_lo1pd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yv5nn"]
+bg_color = Color(5.9200825e-06, 0.7208987, 0.31633702, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a1gg6"]
+bg_color = Color(0.30776665, 3.0635223e-05, 0.27810252, 1)
+
+[node name="LevelRunner" type="Node2D" unique_id=465691251]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=148102529]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1820498463]
+motion_mirroring = Vector2(8192, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1973087933]
+position = Vector2(-2509, -813.99994)
+scale = Vector2(2, 2)
+texture = ExtResource("1_tqdnr")
+centered = false
+
+[node name="AutoPlayer" parent="." unique_id=411869264 instance=ExtResource("1_7ej1w")]
+
+[node name="Camera2D" type="Camera2D" parent="AutoPlayer" unique_id=1855672830]
+position = Vector2(150, -50)
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="AutoPlayer" unique_id=138644378 groups=["bgm"]]
+stream = ExtResource("7_lucy6")
+autoplay = true
+
+[node name="RunnerBoss" parent="." unique_id=490932336 node_paths=PackedStringArray("player") instance=ExtResource("2_tqdnr")]
+position = Vector2(731, -60)
+scale = Vector2(2, 2)
+boss_offset_x = 600.0
+player = NodePath("../AutoPlayer")
+
+[node name="WorldSpawner" parent="." unique_id=320949920 instance=ExtResource("3_lucy6")]
+chunk_scenes = Array[PackedScene]([ExtResource("4_lo1pd")])
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1406346327]
+script = ExtResource("5_bel1f")
+
+[node name="CoinLabel" type="Label" parent="HUD" unique_id=57179195]
+offset_left = -212.0
+offset_top = 25.0
+offset_right = -172.0
+offset_bottom = 48.0
+text = "Coin"
+
+[node name="BossHPLabel" type="Label" parent="HUD" unique_id=1881704331]
+offset_left = -175.0
+offset_top = 45.0
+offset_right = -135.0
+offset_bottom = 68.0
+
+[node name="PlayerHPLabel" type="Label" parent="HUD" unique_id=777487997]
+offset_left = -142.0
+offset_top = 11.0
+offset_right = -102.0
+offset_bottom = 34.0
+
+[node name="PlayerHPBar" type="ProgressBar" parent="HUD" unique_id=709994931]
+offset_left = 1.0
+offset_right = 346.0
+offset_bottom = 40.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_yv5nn")
+value = 100.0
+
+[node name="BossHPBar" type="ProgressBar" parent="HUD" unique_id=855038443]
+offset_left = 112.0
+offset_top = 580.0
+offset_right = 1031.0
+offset_bottom = 607.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_a1gg6")
+max_value = 2500.0
+value = 2500.0
+
+[node name="GameOverUI" parent="." unique_id=174110605 instance=ExtResource("8_lo1pd")]

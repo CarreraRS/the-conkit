@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://c52x4vfsxvh87"]
+
+[ext_resource type="Script" uid="uid://bsuvtlgjv0t0d" path="res://shop_menu.gd" id="1_moj7c"]
+[ext_resource type="Texture2D" uid="uid://dgum458gj6tsr" path="res://item/coin.png" id="2_0b6pb"]
+
+[node name="ShopMenu" type="Control" unique_id=1653349476]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1151.0
+offset_bottom = 648.0
+script = ExtResource("1_moj7c")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=802659245]
+layout_mode = 0
+offset_right = 1149.0
+offset_bottom = 646.0
+color = Color(0.14767182, 0.14767179, 0.14767179, 1)
+
+[node name="WarningLabel" type="Label" parent="." unique_id=1532966065]
+visible = false
+layout_mode = 0
+offset_left = 436.0
+offset_top = 216.0
+offset_right = 689.0
+offset_bottom = 256.0
+theme_override_colors/font_color = Color(0.84263474, 3.5616756e-06, 4.813075e-07, 1)
+theme_override_font_sizes/font_size = 29
+text = "Not enough coins!"
+
+[node name="CoinsLabel" type="Label" parent="." unique_id=347538741]
+layout_mode = 0
+offset_left = 103.0
+offset_top = 37.0
+offset_right = 241.0
+offset_bottom = 125.0
+theme_override_font_sizes/font_size = 32
+text = "Coin"
+
+[node name="UpgradesContainer" type="VBoxContainer" parent="." unique_id=1491478962]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HPUpgradeRow" type="HBoxContainer" parent="UpgradesContainer" unique_id=1910573782]
+layout_mode = 2
+
+[node name="HPLabel" type="Label" parent="UpgradesContainer/HPUpgradeRow" unique_id=1745247807]
+layout_mode = 2
+
+[node name="HPCostLabel" type="Label" parent="UpgradesContainer/HPUpgradeRow" unique_id=1929994450]
+layout_mode = 2
+text = "HP"
+
+[node name="HPButton" type="Button" parent="UpgradesContainer/HPUpgradeRow" unique_id=1219699712]
+layout_mode = 2
+text = "BUY"
+
+[node name="ATKUpgradeRow" type="HBoxContainer" parent="UpgradesContainer" unique_id=1928230627]
+layout_mode = 2
+
+[node name="ATKLabel" type="Label" parent="UpgradesContainer/ATKUpgradeRow" unique_id=1567718779]
+layout_mode = 2
+text = "ATK"
+
+[node name="ATKCostLabel" type="Label" parent="UpgradesContainer/ATKUpgradeRow" unique_id=1010976351]
+layout_mode = 2
+
+[node name="ATKButton" type="Button" parent="UpgradesContainer/ATKUpgradeRow" unique_id=1498097155]
+layout_mode = 2
+text = "BUY"
+
+[node name="StaminaUpgradeRow" type="HBoxContainer" parent="UpgradesContainer" unique_id=677611202]
+layout_mode = 2
+
+[node name="StaminaLabel" type="Label" parent="UpgradesContainer/StaminaUpgradeRow" unique_id=1315933841]
+layout_mode = 2
+text = "STAMINA"
+
+[node name="StaminaCostLabel" type="Label" parent="UpgradesContainer/StaminaUpgradeRow" unique_id=1666831707]
+layout_mode = 2
+
+[node name="StaminaButton" type="Button" parent="UpgradesContainer/StaminaUpgradeRow" unique_id=675469224]
+layout_mode = 2
+text = "BUY"
+
+[node name="NextLevelButton" type="Button" parent="." unique_id=1698353041]
+layout_mode = 0
+offset_left = 507.0
+offset_top = 473.0
+offset_right = 597.0
+offset_bottom = 504.0
+text = "Next Level"
+
+[node name="Coin" type="Sprite2D" parent="." unique_id=433208827]
+position = Vector2(80, 58)
+texture = ExtResource("2_0b6pb")

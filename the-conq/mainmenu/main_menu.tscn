@@ -1,0 +1,201 @@
+[gd_scene format=3 uid="uid://b4j1wwpamrade"]
+
+[ext_resource type="Script" uid="uid://2nckucmyjl52" path="res://main_menu.gd" id="1_vy800"]
+[ext_resource type="VideoStream" uid="uid://cbh5b2qqhlf7l" path="res://mainmenu/0802.ogv" id="2_7at75"]
+[ext_resource type="Texture2D" uid="uid://cokm3wlkw45g8" path="res://Credits/sd22.png" id="2_skr7d"]
+[ext_resource type="Texture2D" uid="uid://bo38tx8jmsq6l" path="res://Credits/Untitled-1.png" id="3_04bgo"]
+[ext_resource type="AudioStream" uid="uid://coj5814xpkk5x" path="res://music/AKMU (악뮤) Love Lee  8 Bit Cover.mp3" id="4_04bgo"]
+[ext_resource type="Texture2D" uid="uid://g3d0763nsc6c" path="res://mainmenu/thecinkit.png" id="5_yxufh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wtqeq"]
+bg_color = Color(0.15294118, 0.05882353, 0.14901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vy800"]
+bg_color = Color(0.13336727, 0.12533936, 0.17808113, 1)
+
+[node name="MainMenu" type="Control" unique_id=1593102472]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1147.0
+offset_bottom = 652.0
+script = ExtResource("1_vy800")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=255066129]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_7at75")
+autoplay = true
+expand = true
+loop = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=353749318]
+visible = false
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 653.0
+color = Color(0.20784314, 0.19215687, 0.2, 0.24705882)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2123018315]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -571.5
+offset_top = -325.0
+offset_right = 577.5
+offset_bottom = 321.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="." unique_id=1811174200]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Thecinkit" type="Sprite2D" parent="." unique_id=1940900756]
+position = Vector2(261.00003, 151)
+scale = Vector2(0.3380682, 0.3515625)
+texture = ExtResource("5_yxufh")
+
+[node name="MenuButtons" type="VBoxContainer" parent="." unique_id=2115424817]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -418.5
+offset_top = -59.0
+offset_right = -218.5
+offset_bottom = 77.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" type="Button" parent="MenuButtons" unique_id=1929805298]
+layout_mode = 2
+text = "PLAY"
+
+[node name="OptionButton" type="Button" parent="MenuButtons" unique_id=1247800607]
+layout_mode = 2
+text = "OPTION"
+
+[node name="CreditsButton" type="Button" parent="MenuButtons" unique_id=1707859929]
+layout_mode = 2
+text = "CREDITS"
+
+[node name="ExitButton" type="Button" parent="MenuButtons" unique_id=990516458]
+layout_mode = 2
+text = "EXIT"
+
+[node name="OptionPanel" type="Panel" parent="." unique_id=1795505969]
+visible = false
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 647.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wtqeq")
+
+[node name="VolumeSlider" type="HSlider" parent="OptionPanel" unique_id=1940310165]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.0
+offset_top = -38.5
+offset_right = 262.0
+offset_bottom = 40.5
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="CloseOptionButton" type="Button" parent="OptionPanel" unique_id=135508818]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -37.0
+offset_top = -295.0
+offset_right = 21.0
+offset_bottom = -264.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "CLOSE"
+
+[node name="Label" type="Label" parent="OptionPanel" unique_id=1300529238]
+layout_mode = 0
+offset_left = 538.0
+offset_top = 290.0
+offset_right = 605.0
+offset_bottom = 313.0
+text = "VOLUME"
+
+[node name="CreditsPanel" type="Panel" parent="." unique_id=935335414]
+visible = false
+layout_mode = 0
+offset_right = 1148.0
+offset_bottom = 652.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vy800")
+
+[node name="Label" type="Label" parent="CreditsPanel" unique_id=1239998999]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -173.0
+offset_top = -138.0
+offset_right = 178.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "DEV : 673380346-8 Siriwat Waidee (CarreraRS)
+Boss Design : @chierit7
+Monster Design : LuizMelo, craftpix
+VFX Design : @PimenArt
+Tile Design : Szadi art. , @theflavare
+Audio/Music : Darnu-Pop"
+horizontal_alignment = 1
+
+[node name="CloseCreditsButton" type="Button" parent="CreditsPanel" unique_id=1607541584]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -33.0
+offset_top = -292.0
+offset_right = 25.0
+offset_bottom = -261.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "CLOSE"
+
+[node name="Sd22" type="Sprite2D" parent="CreditsPanel" unique_id=292684030]
+position = Vector2(981.00006, 349)
+scale = Vector2(0.1731302, 0.17070638)
+texture = ExtResource("2_skr7d")
+
+[node name="Untitled1" type="Sprite2D" parent="CreditsPanel" unique_id=2069532798]
+position = Vector2(206, 322)
+scale = Vector2(0.21173823, 0.24255541)
+texture = ExtResource("3_04bgo")
+
+[node name="bgm" type="AudioStreamPlayer2D" parent="." unique_id=1105547788]
+stream = ExtResource("4_04bgo")
+autoplay = true

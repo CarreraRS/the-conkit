@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cuis8lpl61aft"]
+
+[ext_resource type="PackedScene" uid="uid://8hyttug3ri81" path="res://levels/level_1.tscn" id="1_7kbdh"]
+[ext_resource type="PackedScene" uid="uid://cdjewkxowumjc" path="res://enemy/enemy_slime.tscn" id="2_1v38n"]
+[ext_resource type="PackedScene" uid="uid://c5148uemdtclh" path="res://enemy/boss.tscn" id="3_27a1k"]
+
+[node name="testlevel" unique_id=1172939357 instance=ExtResource("1_7kbdh")]
+
+[node name="TileMap" parent="." index="1" unique_id=485773740]
+layer_0/tile_data = PackedInt32Array(-131072, 1441792, 6, -131071, 1441792, 6, -131070, 1441792, 6, -131069, 1441792, 6, -131068, 1441792, 6, -131067, 1441792, 6, -131066, 1441792, 6, -131065, 1441792, 6, -131064, 1441792, 6, -131063, 1441792, 6, -131062, 1441792, 6, -131061, 1441792, 6, -131060, 1441792, 6, -131059, 1441792, 6, -131058, 1441792, 6, -131057, 1441792, 6, -131056, 1441792, 6, -131055, 1441792, 6, -131054, 1441792, 6, -131053, 1441792, 6, -131052, 1441792, 6, -131051, 1441792, 6, -131050, 1441792, 6, -131049, 1441792, 6, -131048, 1441792, 6, -131047, 1441792, 6, -131046, 1441792, 6, -131045, 1441792, 6, -131044, 1441792, 6, -131040, 1441792, 6, -131043, 1441792, 6, -131042, 1441792, 6, -131041, 1441792, 6, -131039, 1441792, 6)
+
+[node name="enemy_slime4" parent="." index="2" unique_id=201840628 instance=ExtResource("2_1v38n")]
+position = Vector2(277, -39)
+
+[node name="player" parent="." index="3" unique_id=1866740259]
+position = Vector2(19, -50)
+
+[node name="boss" parent="." index="19" unique_id=517379817 instance=ExtResource("3_27a1k")]
+position = Vector2(185, -33)
+speed = 120.0
+detection_range = 300.0

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://df1nsrugf4v8e"
+path="res://.godot/imported/NewJeans (뉴진스) 'New Jeans'  8 Bit Cover.mp3-887be4c2d57f33b9274c90f4d93ee2e6.mp3str"
+
+[deps]
+
+source_file="res://music/NewJeans (뉴진스) 'New Jeans'  8 Bit Cover.mp3"
+dest_files=["res://.godot/imported/NewJeans (뉴진스) 'New Jeans'  8 Bit Cover.mp3-887be4c2d57f33b9274c90f4d93ee2e6.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

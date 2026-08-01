@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dban1nowk1rye"]
+
+[ext_resource type="Script" uid="uid://drj6ajoo420ru" path="res://attack_item.gd" id="1_ffavx"]
+[ext_resource type="Texture2D" uid="uid://b3xcm3xary8ju" path="res://item/electricorb.png" id="2_gwkxq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wtqeq"]
+radius = 119.99954
+
+[node name="AttackItem" type="Area2D" unique_id=1503540468]
+script = ExtResource("1_ffavx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=36355847]
+position = Vector2(2.2888184e-05, -0.9999771)
+scale = Vector2(0.05, 0.049)
+texture = ExtResource("2_gwkxq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1829082709]
+position = Vector2(2.2888184e-05, -0.9999771)
+scale = Vector2(0.05, 0.049)
+shape = SubResource("CircleShape2D_wtqeq")

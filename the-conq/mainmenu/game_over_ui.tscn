@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://p1ldqw8kvj8q"]
+
+[ext_resource type="Script" uid="uid://bi326bny7qp06" path="res://mainmenu/game_over_ui.gd" id="1_4afmy"]
+[ext_resource type="AudioStream" uid="uid://dq1xuwatyobek" path="res://music/Mice On Venus but make it E X T R A nostalgic.mp3" id="2_m8typ"]
+
+[node name="GameOverUI" type="CanvasLayer" unique_id=698242849 groups=["game_over_ui"]]
+visible = false
+script = ExtResource("1_4afmy")
+
+[node name="Panel" type="Panel" parent="." unique_id=1778575169]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1771326056]
+anchors_preset = -1
+anchor_bottom = 0.018000001
+offset_left = 531.0
+offset_top = 271.0
+offset_right = 622.0
+offset_bottom = 289.336
+text = "GAMEOVER"
+
+[node name="RestartButton" type="Button" parent="." unique_id=1795924529]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -15.5
+offset_right = 37.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "RESTART"
+
+[node name="MainMenuButton" type="Button" parent="." unique_id=68082319]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = 24.0
+offset_right = 53.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MAIN MENU"
+
+[node name="GameOverSound" type="AudioStreamPlayer" parent="." unique_id=592914321]
+stream = ExtResource("2_m8typ")

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b3wf0t1sma18l"]
+
+[ext_resource type="Script" uid="uid://cjj1cp472wl60" path="res://howtoplay.gd" id="1_8x75q"]
+[ext_resource type="Texture2D" uid="uid://8hc7mc0jg6xq" path="res://image/tur1.png" id="2_3gn68"]
+
+[node name="howtoplay" type="Control" unique_id=470326921]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8x75q")
+
+[node name="StoryScene" type="TextureRect" parent="." unique_id=2108590075]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_3gn68")
+
+[node name="NextButton" type="Button" parent="." unique_id=261851811]
+layout_mode = 0
+offset_left = 973.0
+offset_top = 534.0
+offset_right = 1087.0
+offset_bottom = 591.0
+text = "PLAY"

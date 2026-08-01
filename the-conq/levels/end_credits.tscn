@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cnhiltu3jebhv"]
+
+[ext_resource type="Script" uid="uid://duwglq6j8dgl6" path="res://levels/end_credits.gd" id="1_704yh"]
+[ext_resource type="Texture2D" uid="uid://1jgpgg1cj8dl" path="res://image/endcredits.png" id="1_clkft"]
+[ext_resource type="AudioStream" uid="uid://f4hjtls048hy" path="res://music/IVE 아이브 'BLACKHOLE' Videogame Ver..mp3" id="3_k65ke"]
+
+[node name="EndCredits" type="Control" unique_id=1898279391]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_704yh")
+
+[node name="StoryImage" type="TextureRect" parent="." unique_id=970747722]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_clkft")
+
+[node name="NextButton" type="Button" parent="." unique_id=699248239]
+layout_mode = 0
+offset_left = 556.0
+offset_top = 301.0
+offset_right = 605.0
+offset_bottom = 332.0
+text = "END"
+
+[node name="bgm" type="AudioStreamPlayer2D" parent="." unique_id=1843391946]
+stream = ExtResource("3_k65ke")
+autoplay = true
